@@ -49,7 +49,7 @@ app.get("/", (req, res) => {
 app.get("/download", (req, res) => {
   const { fileName } = req.query;
   if (!fileName) {
-    return res.send("Invalid file name");
+    return res.send("<h2>Invalid file name</h2>");
   }
   const file = `${__dirname}/dl/${fileName}`;
   res.download(file);
